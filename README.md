@@ -6,3 +6,6 @@
 
 
 [![Github Actions Status](https://github.com/petrovskydv/python-project-lvl1/workflows/Python%20CI/badge.svg)](https://github.com/petrovskydv/python-project-lvl1/actions)
+
+
+Демо проекта [https://asciinema.org/a/1ERFpDY1iU75DSH1fPOj7Z0JJ](https://asciinema.org/a/1ERFpDY1iU75DSH1fPOj7Z0JJ)
