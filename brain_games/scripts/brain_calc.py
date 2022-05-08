@@ -1,5 +1,3 @@
-
-
 from brain_games.gameplay import play, greet
 from brain_games.games.calc import get_game_description, get_question, get_answer
 

@@ -11,10 +11,10 @@ def get_question():
 def get_answer(expression):
     if expression[1] == '+':
         return str(expression[0] + expression[2])
-    elif expression[1] == '-':
+    if expression[1] == '-':
         return str(expression[0] - expression[2])
-    else:
-        return str(expression[0] * expression[2])
+
+    return str(expression[0] * expression[2])
 
 
 def get_game_description():
