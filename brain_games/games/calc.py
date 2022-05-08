@@ -8,6 +8,10 @@ def get_question():
     return number1, action, number2
 
 
+def get_question_text(expression):
+    return ' '.join(expression)
+
+
 def get_answer(expression):
     if expression[1] == '+':
         return str(expression[0] + expression[2])
