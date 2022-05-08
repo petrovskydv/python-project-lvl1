@@ -9,7 +9,7 @@ def get_question():
 
 
 def get_question_text(expression):
-    return ' '.join(expression)
+    return f'{expression[0]} {expression[1]} {expression[2]}'  # noqa: WPS221
 
 
 def get_answer(expression):
