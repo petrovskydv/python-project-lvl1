@@ -7,6 +7,10 @@ def get_question():
     return number1, number2
 
 
+def get_question_text(expression):
+    return f'{expression[0]} {expression[1]}'  # noqa: WPS221
+
+
 def get_answer(numbers):
     number1, number2 = numbers
     while number1 != 0 and number2 != 0:
