@@ -1,27 +1,27 @@
 #!/usr/bin/env python
-import random
 
-import prompt
+from brain_games.gameplay import play, greet
+from brain_games.games.even import get_game_description, get_question, get_answer
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    for _ in range(3):
-        number = random.randint(1, 100)
-        print(f'Question: {number}')
-        correct_answer = 'yes' if number % 2 == 0 else 'no'
-        answer = input('Your answer:')
-        if answer == correct_answer:
-            print('Correct!')
-        else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
-            print("Let's try again, {name}!")
-            exit()
+    name = greet()
+    print(get_game_description())
 
-    print(f'Congratulations, {name}!')
+    question1 = get_question()
+    answer1 = get_answer(question1)
+    question2 = get_question()
+    answer2 = get_answer(question2)
+    question3 = get_question()
+    answer3 = get_answer(question3)
+
+    questions = (question1, question2, question3)
+    answers = (answer1, answer2, answer3)
+
+    if play(questions, answers):
+        print(f'Congratulations, {name}!')
+    else:
+        print(f"Let's try again, {name}!")
 
 
 if __name__ == '__main__':
