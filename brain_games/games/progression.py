@@ -2,9 +2,7 @@ import random
 
 
 def get_question():
-    min_length = 8
-    max_length = 15
-    count = random.randint(min_length, max_length)
+    count = 10
     step = random.randint(1, 10)
     start = random.randint(1, 100)
 
