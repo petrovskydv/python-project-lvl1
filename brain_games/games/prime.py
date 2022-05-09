@@ -5,10 +5,6 @@ def get_question():
     return random.randint(1, 100)
 
 
-def get_question_text(number):
-    return str(number)
-
-
 def get_answer(number):
     return 'yes' if is_prime(number) else 'no'
 
