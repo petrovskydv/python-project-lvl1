@@ -8,7 +8,7 @@ def play(questions, correct_answers):
         if correct_answers[index] == answer:
             print('Correct!')
         else:
-            template = "'{1}' is wrong answer ;(. Correct answer was '{2}'"
+            template = "'{0}' is wrong answer ;(. Correct answer was '{1}'"
             print(template.format(answer, correct_answers[index]))
             return False
     return True
