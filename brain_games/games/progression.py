@@ -3,8 +3,8 @@ import random
 
 def get_question():
     count = 9
-    step = random.randint(1, 10)
-    start = random.randint(1, 100)
+    step = random.randint(1, 5)
+    start = random.randint(1, 20)
 
     sequence = [start]
     for _ in range(count):
