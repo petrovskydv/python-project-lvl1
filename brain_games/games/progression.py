@@ -2,7 +2,7 @@ import random
 
 
 def get_question():
-    min_length = 6
+    min_length = 8
     max_length = 15
     count = random.randint(min_length, max_length)
     step = random.randint(1, 10)
@@ -31,7 +31,7 @@ def get_answer(numbers, hidden_index):
 
 
 def get_hidden_index(numbers):
-    return random.randint(1, len(numbers) - 2)
+    return random.randint(3, len(numbers) - 2)
 
 
 def get_game_description():
