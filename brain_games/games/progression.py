@@ -15,8 +15,9 @@ def get_question():
 
 
 def get_question_text(numbers, hidden_index):
+    correct_answer = numbers[hidden_index]
     return ' '.join(
-        '..' if number == numbers[hidden_index] else str(number) for number in numbers
+        '..' if number == correct_answer else str(number) for number in numbers
     )
 
 

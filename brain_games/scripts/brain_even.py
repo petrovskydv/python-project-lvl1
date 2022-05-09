@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 
 from brain_games.gameplay import play, greet
-from brain_games.games.even import get_game_description, get_question, get_answer
+from brain_games.games.even import (
+    get_game_description,
+    get_question,
+    get_answer,
+)
 
 
 def main():

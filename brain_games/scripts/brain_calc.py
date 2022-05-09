@@ -1,5 +1,10 @@
 from brain_games.gameplay import play, greet
-from brain_games.games.calc import get_game_description, get_question, get_answer, get_question_text
+from brain_games.games.calc import (
+    get_game_description,
+    get_question,
+    get_answer,
+    get_question_text,
+)
 
 
 def main():
@@ -13,7 +18,11 @@ def main():
     question3 = get_question()
     answer3 = get_answer(question3)
 
-    questions = (get_question_text(question1), get_question_text(question2), get_question_text(question3))
+    questions = (
+        get_question_text(question1),
+        get_question_text(question2),
+        get_question_text(question3),
+    )
     answers = (answer1, answer2, answer3)
 
     if play(questions, answers):
