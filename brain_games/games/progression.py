@@ -1,0 +1,38 @@
+import random
+
+
+def get_question():
+    min_length = 6
+    max_length = 15
+    count = random.randint(min_length, max_length)
+    step = random.randint(1, 10)
+    start = random.randint(1, 100)
+
+    sequence = [start]
+    for _ in range(count):
+        start += step
+        sequence.append(start)
+
+    return sequence
+
+
+def get_question_text(numbers, hidden_index):
+    text = ''
+    for index in range(len(numbers)):  # noqa: WPS518
+        if index == hidden_index:
+            text = ' '.join([text, '..'])
+        else:
+            text = ' '.join([text, str(numbers[index])])
+    return text
+
+
+def get_answer(numbers, hidden_index):
+    return str(numbers[hidden_index])
+
+
+def get_hidden_index(numbers):
+    return random.randint(1, len(numbers) - 2)
+
+
+def get_game_description():
+    return 'Find the greatest common divisor of given numbers.'
