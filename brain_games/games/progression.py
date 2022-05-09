@@ -4,7 +4,7 @@ import random
 def get_question():
     count = 9
     step = random.randint(1, 5)
-    start = random.randint(1, 20)
+    start = random.randint(1, 20)  # noqa:WPS432
 
     sequence = [start]
     for _ in range(count):
@@ -15,17 +15,9 @@ def get_question():
 
 
 def get_question_text(numbers, hidden_index):
-    # text = ''
-    # for index in range(len(numbers)):  # noqa: WPS518
-    #     if index == hidden_index:
-    #         text = ' '.join([text, '..'])
-    #     else:
-    #         text = ' '.join([text, str(numbers[index])])
-
-    text = ' '.join(
+    return ' '.join(
         '..' if number == numbers[hidden_index] else str(number) for number in numbers
     )
-    return text
 
 
 def get_answer(numbers, hidden_index):
