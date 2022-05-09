@@ -2,7 +2,7 @@ import random
 
 
 def get_question():
-    count = 10
+    count = 9
     step = random.randint(1, 10)
     start = random.randint(1, 100)
 
