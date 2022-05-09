@@ -15,12 +15,16 @@ def get_question():
 
 
 def get_question_text(numbers, hidden_index):
-    text = ''
-    for index in range(len(numbers)):  # noqa: WPS518
-        if index == hidden_index:
-            text = ' '.join([text, '..'])
-        else:
-            text = ' '.join([text, str(numbers[index])])
+    # text = ''
+    # for index in range(len(numbers)):  # noqa: WPS518
+    #     if index == hidden_index:
+    #         text = ' '.join([text, '..'])
+    #     else:
+    #         text = ' '.join([text, str(numbers[index])])
+
+    text = ' '.join(
+        '..' if number == numbers[hidden_index] else str(number) for number in numbers
+    )
     return text
 
 
