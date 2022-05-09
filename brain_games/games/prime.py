@@ -10,10 +10,17 @@ def get_answer(number):
 
 
 def is_prime(number):
+    if number < 2:
+        return False
+
     divider = 2
-    while number % divider != 0:
+
+    while divider <= number / 2:
+        if number % divider == 0:
+            return False
         divider += 1
-    return divider == number
+
+    return True
 
 
 def get_game_description():
